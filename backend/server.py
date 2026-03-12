@@ -17,7 +17,9 @@ CORS(app)
 agent = DQNAgent(STATE_SIZE, ACTION_SIZE)
 agent.model.load_state_dict(torch.load("final_model.pth", map_location=torch.device("cpu")))
 agent.model.eval()
-
+@app.route('/')
+def home():
+    return "SecureXShield API is running"
 @app.route('/predict', methods=['POST'])
 def predict_url():
     data = request.get_json()

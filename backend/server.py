@@ -6,6 +6,9 @@ from dqn_agent import DQNAgent
 from data_loader import extract_features
 from config import *
 from url_parser import parse_url
+import os
+
+
 
 app = Flask(__name__)
 CORS(app)
@@ -75,8 +78,9 @@ def predict_url():
         return jsonify({"error": str(e)}), 500
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
 
 
 # https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/ -> Legimate

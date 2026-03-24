@@ -39,26 +39,6 @@ https://secure-x-sheild-bzfh.vercel.app/
 - **Libraries**: TensorFlow / PyTorch, Scikit-learn  
 
 ---
-## Installation & Setup
-
-You can run the project locally using the following steps:
-
-### Clone the Repository
-git clone https://github.com/RamakotireddyGuttikonda/PhishUrlHunter.git
-cd PhishingDetection-ReinforcementLearning
-
-### 1.Run the Backend:
-
-cd backend
-pip install -r requirements.txt
-python server.py
-
-###2.Run the Frontend:
-cd PhishingDetection-ReinforcementLearning
-npm install @vitejs/plugin-react --save-dev
-npm run dev
-By default, the server runs at http://localhost:5000/
-
 ## Test Phishing Detection
 
 - Enter URLs in the web app input field and submit.  
